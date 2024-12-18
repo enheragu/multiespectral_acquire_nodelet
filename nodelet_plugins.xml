@@ -1,0 +1,31 @@
+<library path="lib/libbasler_nodelet_master">
+  <class name="multiespectral_fb/BaslerNodeletMaster"
+         type="multiespectral_fb::MultiespectralAcquireM"
+         base_class_type="nodelet::Nodelet">
+    <description>Basler Nodelet Master</description>
+  </class>
+</library>
+
+<!-- <library path="lib/libbasler_nodelet_slave">
+  <class name="multiespectral_fb/BaslerNodeletSlave"
+         type="multiespectral_fb::MultiespectralAcquireS"
+         base_class_type="nodelet::Nodelet">
+    <description>Basler Nodelet Slave</description>
+  </class>
+</library>
+
+<library path="lib/libflir_nodelet_master">
+  <class name="multiespectral_fb/FlirNodeletMaster"
+         type="multiespectral_fb::MultiespectralAcquireM" 
+         base_class_type="nodelet::Nodelet">
+    <description>FLIR Nodelet Master</description>
+  </class>
+</library> -->
+
+<library path="lib/libflir_nodelet_slave">
+  <class name="multiespectral_fb/FlirNodeletSlave"
+         type="multiespectral_fb::MultiespectralAcquireS"
+         base_class_type="nodelet::Nodelet">
+    <description>FLIR Nodelet Slave</description>
+  </class>
+</library>

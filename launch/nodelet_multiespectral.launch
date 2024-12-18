@@ -1,0 +1,18 @@
+<launch>
+
+    <arg name="dataset_output_path" default="/home/administrator/eeha_images"/>
+    <arg name="frame_rate" default="2"/>
+
+    <node pkg="nodelet" type="nodelet" name="nodelet_manager" args="manager"/>
+    
+    <node pkg="nodelet" type="nodelet" name="basler_nodelet_master" args="load multiespectral_fb/BaslerNodeletMaster">
+        <param name="dataset_output_path" value="$(arg dataset_output_path)"/>  
+        <param name="frame_rate" value="$(arg frame_rate)"/>  
+    </node>
+
+   <node pkg="nodelet" type="nodelet" name="flir_nodelet_slave" args="load multiespectral_fb/FlirNodeletSlave">
+        <param name="dataset_output_path" value="$(arg dataset_output_path)"/>  
+        <param name="frame_rate" value="$(arg frame_rate)"/>  
+    </node>
+
+</launch>
